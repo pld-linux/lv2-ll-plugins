@@ -1,0 +1,10 @@
+--- plugins/sineshaper/sineshaperwidget.hpp.orig	2010-01-20 13:49:46.907966501 +0100
++++ plugins/sineshaper/sineshaperwidget.hpp	2010-01-20 13:49:56.371298145 +0100
+@@ -28,6 +28,7 @@
+ #include <vector>
+ 
+ #include <gtkmm.h>
++#include <stdint.h>
+ 
+ #include "skindial_gtkmm.hpp"
+ 
