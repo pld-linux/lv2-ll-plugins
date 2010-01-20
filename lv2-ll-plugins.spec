@@ -8,7 +8,7 @@ Release:	1
 License:	GPL v3
 Group:		Applications/Sound
 Source0:	http://download.savannah.nongnu.org/releases/%{_name}/%{_name}-%{version}.tar.bz2
-# Source0-md5:	d41d8cd98f00b204e9800998ecf8427e
+# Source0-md5:	1b321d6eb7874bd3fe8b2b95642d5d3f
 Patch0:		%{name}-include.patch
 Patch1:		%{name}-elven-lib.patch
 URL:		http://ll-plugins.nongnu.org
