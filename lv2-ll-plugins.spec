@@ -3,14 +3,12 @@
 Summary:	LL - a set of LV2 audio plugins
 Summary(pl.UTF-8):	LL - zestaw wtyczek dźwiękowych LV2
 Name:		lv2-%{_name}
-Version:	0.2.8
+Version:	0.2.33
 Release:	1
 License:	GPL v3+
 Group:		Applications/Sound
 Source0:	http://download.savannah.nongnu.org/releases/ll-plugins/%{_name}-%{version}.tar.bz2
-# Source0-md5:	56e7f4a62fce6b22b4acdb02ba06669c
-Patch0:		%{name}-include.patch
-Patch1:		%{name}-elven-lib.patch
+# Source0-md5:	a09a658c665176049bee9dc694f01cd2
 URL:		http://ll-plugins.nongnu.org/
 BuildRequires:	alsa-lib-devel
 BuildRequires:	bash >= 3.0
@@ -23,6 +21,7 @@ BuildRequires:	libsamplerate-devel >= 0.1.2
 BuildRequires:	libsndfile-devel >= 1.0.18
 BuildRequires:	lv2-c++-tools-devel >= 1.0.0
 BuildRequires:	pkgconfig
+BuildRequires:	sed >= 4.0
 Requires:	cairomm >= 1.2.4
 Requires:	gtkmm >= 2.8.8
 Requires:	libsamplerate >= 0.1.2
@@ -56,10 +55,8 @@ Elven jest eksperymentalnym środowiskiem uruchomieniowym LV2
 
 %prep
 %setup -q -n %{_name}-%{version}
-%patch0 -p0
-%ifarch %{x8664}
-%patch1 -p0
-%endif
+
+%{__sed} -i -e 's,/lib/,/%{_lib}/,' programs/elven/lv2host.cpp
 
 %build
 ./configure \
