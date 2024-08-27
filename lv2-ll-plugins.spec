@@ -1,13 +1,13 @@
-%define		_name	ll-plugins
+%define		srcname	ll-plugins
 #
 Summary:	LL - a set of LV2 audio plugins
 Summary(pl.UTF-8):	LL - zestaw wtyczek dźwiękowych LV2
-Name:		lv2-%{_name}
+Name:		lv2-%{srcname}
 Version:	0.2.33
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Applications/Sound
-Source0:	http://download.savannah.nongnu.org/releases/ll-plugins/%{_name}-%{version}.tar.bz2
+Source0:	http://download.savannah.nongnu.org/releases/ll-plugins/%{srcname}-%{version}.tar.bz2
 # Source0-md5:	a09a658c665176049bee9dc694f01cd2
 URL:		http://ll-plugins.nongnu.org/
 BuildRequires:	alsa-lib-devel
@@ -26,7 +26,7 @@ Requires:	cairomm >= 1.2.4
 Requires:	gtkmm >= 2.8.8
 Requires:	libsamplerate >= 0.1.2
 Requires:	libsndfile >= 1.0.18
-Requires:	lv2core
+Requires:	lv2 >= 1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
