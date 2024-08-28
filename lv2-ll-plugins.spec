@@ -4,7 +4,7 @@ Summary:	LL - a set of LV2 audio plugins
 Summary(pl.UTF-8):	LL - zestaw wtyczek dźwiękowych LV2
 Name:		lv2-%{srcname}
 Version:	0.2.33
-Release:	3
+Release:	4
 License:	GPL v3+
 Group:		Applications/Sound
 Source0:	http://download.savannah.nongnu.org/releases/ll-plugins/%{srcname}-%{version}.tar.bz2
@@ -44,7 +44,7 @@ Group:		Applications/Sound
 Requires:	cairomm >= 1.2.4
 Requires:	gtkmm >= 2.8.8
 Requires:	lash-libs >= 0.5.1
-Requires:	lv2core
+Requires:	lv2 >= 1
 
 %description -n elven
 Elven is Experimental LV2 Execution ENvironment.
